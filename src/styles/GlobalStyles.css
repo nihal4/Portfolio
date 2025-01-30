@@ -1,0 +1,161 @@
+
+ /* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Fira Code', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text */
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Frosted glass effect */
+.frosted-glass {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); /* Frosted white semi-transparent */
+  backdrop-filter: blur(10px); /* Blur behind the element */
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+  width: 100%;
+  max-width: 600px;
+}
+
+.frosted-glass h1,
+.frosted-glass h2 {
+  font-family: 'Playwrite NG Modern', sans-serif;
+  color: #fff; /* White text */
+}
+
+.frosted-glass p {
+  color: #ddd; /* Light grey text */
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.frosted-glass button {
+  cursor: pointer;
+  background-color: #333; /* Dark button background */
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.frosted-glass button:hover {
+  background-color: #555; /* Darker button on hover */
+  transform: scale(1.1);
+}
+
+/* Frosted background effect on hover */
+.frosted-glass:hover {
+  transform: translateY(-10px);
+}
+
+
+
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Contact links style */
+.contact-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #bbb; /* Light grey on hover */
+  transform: scale(1.1);
+}
+
+/* Add smooth transitions */
+.page {
+  transition: transform 0.5s ease;
+}
+
+.page-enter {
+  transform: translateY(100%);
+}
+
+.page-enter-active {
+  transform: translateY(0);
+}
+
+.page-exit {
+  transform: translateY(-100%);
+}
+
+.page-exit-active {
+  transform: translateY(0);
+}
+
+footer {
+  color: #ddd;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Page Styles */
+.home, .specialization, .contact {
+  color: white;
+  background-color: #121212; /* Keeping the dark monochrome background */
+}
+
+/* Additional Elements for Monochrome */
+h1, h2, h3, p {
+  color: #fff; /* White text for all headings and paragraphs */
+}
+
+a {
+  color: #aaa; /* Light grey links */
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #fff; /* White on hover */
+  transform: scale(1.1);
+}
+
+/* Monochrome Theme for Background */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #000, #555); /* Black and grey gradient background */
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}

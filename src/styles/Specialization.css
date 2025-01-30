@@ -1,0 +1,313 @@
+/* General body and page layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  /*background-color: #1a1a1a;  Dark background for contrast */
+  color: white;
+  height: 100%; /* Ensure the body takes up the full viewport height */
+  overflow: hidden; /* Prevent both vertical and horizontal scrollbars */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure no scrollbars appear */
+}
+
+/* About Me Container */
+.about-me-container {
+  font-family: 'Fira Code', sans-serif;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box; /* Make sure padding doesn't cause overflow */
+}
+
+/* About Me Page Content */
+.about-me-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 100%; /* Ensure content doesn't overflow */
+  max-width: 900px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-sizing: border-box; /* Include padding in width */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Compact layout with left and right sections */
+.about-me-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  gap: 30px; /* Add gap between the left and right sections */
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+.about-me-left, .about-me-right {
+  width: 48%; /* Adjust width to fit content in two columns */
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  overflow-wrap: break-word; /* Prevent overflow of long words */
+}
+
+/* Title Styling */
+.about-me-title {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 600; /* Make titles stand out */
+  letter-spacing: 1px;
+  overflow-wrap: break-word; /* Prevent overflow of long words */
+  width: 20rem;
+}
+
+/* Specialized in section */
+.specialized-in {
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  overflow-wrap: break-word; /* Prevent text from overflowing */
+}
+
+/* Search Field */
+.search-field {
+  white-space: nowrap; /* Prevent line breaks for search field */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Button Styling */
+.about-me-button {
+  font-family: 'Fira Code', monospace;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+  width: 100%; /* Make buttons take full width of their container */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+.about-me-button:hover {
+  background-color: white;
+  color: #333;
+  transform: scale(1.1);
+}
+
+/* Research List Styling */
+.about-me-research-list {
+  font-size: 1.2rem;
+  color: #ddd;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+  overflow-wrap: break-word; /* Prevent overflow of list items */
+}
+
+.about-me-research-list li {
+  margin: 8px 0;
+  line-height: 1.6;
+  white-space: nowrap; /* Prevent line breaks within list items */
+  overflow: hidden; /* Hide any overflow if text is too long */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+}
+/* Navigation Buttons Styling */
+.about-me-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 25px;
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+.about-me-buttons button {
+  width: 45%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+/* Adding more structure to button and text spacing */
+.about-me-left, .about-me-right {
+  padding: 20px;
+}
+
+.about-me-buttons button {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+/* Media Queries for Different Screen Sizes */
+
+/* For large screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+  .about-me-title {
+    font-size: 2.2rem;
+  }
+
+  .about-me-content {
+    gap: 40px; /* Increase space between left and right sections */
+  }
+
+  .about-me-left, .about-me-right {
+    width: 48%;
+  }
+
+  .about-me-button {
+    padding: 14px 30px;
+  }
+
+  .about-me-buttons button {
+    width: 45%; /* Keep buttons equal width */
+  }
+}
+
+/* For medium-large screens (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .about-me-title {
+    font-size: 2rem;
+  }
+
+  .about-me-content {
+    gap: 25px; /* Adjust gap for better spacing */
+  }
+
+  .about-me-left, .about-me-right {
+    width: 48%;
+  }
+
+  .about-me-button {
+    padding: 13px 28px;
+  }
+
+  .about-me-buttons button {
+    width: 45%;
+  }
+}
+
+/* For tablet screens (768px and above) */
+@media screen and (max-width: 768px) {
+  /* Ensure content is side by side */
+  .about-me-content {
+    flex-direction: row; /* Keep the content side by side on tablet screens */
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .about-me-left, .about-me-right {
+    width: 48%; /* Ensure both sides are side by side */
+  }
+
+  /* Adjust the About Me title size for tablets */
+  .about-me-title {
+    font-size: 1.7rem;
+  }
+
+  /* Adjust button sizes for tablet screens */
+  .about-me-button {
+    padding: 10px 22px;
+    font-size: 1rem; /* Reduce font size for buttons */
+    width: 100%;
+  }
+
+  .about-me-buttons {
+    flex-direction: row; /* Keep buttons side by side */
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .about-me-buttons button {
+    width: 45%; /* Maintain equal width for buttons */
+    font-size: 1rem;
+  }
+}
+
+/* For small screens (425px and above) - Switch to column layout */
+@media screen and (max-width: 425px) {
+  .about-me-content {
+    flex-direction: column; /* Switch to column layout for smaller screens */
+    align-items: center;
+    width: 100%; /* Ensure the content fits within the screen */
+  }
+
+  .about-me-title {
+    font-size: 1.5rem;
+    width: 18rem;
+  }
+
+  .about-me-button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .about-me-left, .about-me-right {
+    padding: 15px;
+    width: 100%; /* Full width for left and right sections in column layout */
+    text-align: center; /* Center align text in column layout */
+  }
+
+  .about-me-buttons button {
+    font-size: 1rem;
+  }
+}
+
+/* For extra small screens (375px and above) */
+@media screen and (max-width: 375px) {
+  .about-me-title {
+    font-size: 1.4rem;
+  }
+
+  .about-me-button {
+    padding: 7px 16px;
+    font-size: 0.85rem;
+  }
+
+  .about-me-left, .about-me-right {
+    padding: 12px;
+  }
+
+  .about-me-buttons button {
+    font-size: 0.95rem;
+  }
+}
+
+/* For smallest screens (320px and above) */
+@media screen and (max-width: 320px) {
+  .about-me-title {
+    font-size: 1.3rem;
+    width: 17rem;
+  }
+
+  .about-me-button {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .about-me-left, .about-me-right {
+    padding: 10px;
+  }
+
+  .about-me-buttons button {
+    font-size: 0.9rem;
+  }
+}
+

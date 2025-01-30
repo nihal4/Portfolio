@@ -1,0 +1,199 @@
+/* General body and page layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a; /* Dark background for better contrast */
+  color: white;
+}
+
+/* Container that centers everything */
+.container {
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden; /* Prevent text from overflowing outside the viewport */
+}
+
+/* Page content wrapper */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  background: none; /* Transparent background */
+}
+
+/* Typewriter animation for the h1 */
+.typewriter-container h1 {
+  font-family: 'Playwrite NG Modern', sans-serif;
+  color: white;
+  font-size: 4rem; /* Larger size for better readability */
+  overflow: hidden; /* Ensures that the text doesn't overflow */
+  white-space: nowrap; /* Keeps the text in one line */
+  border-right: 4px solid #fff; /* Cursor effect */
+  margin-bottom: 30px; /* Increased space for more breathing room */
+  width: fit-content; /* Prevents it from stretching across */
+  display: inline-block;
+  padding-right: 10px; /* Space for the cursor */
+}
+
+/* Styling for the subtitle */
+h2 {
+  font-size: 2rem;
+  color: #ddd; /* Light grey text */
+  margin-bottom: 20px;
+}
+
+/* Paragraph with description */
+p {
+  font-size: 1.2rem;
+  color: #ddd; /* Light grey text */
+  max-width: 800px;
+  margin-bottom: 30px;
+}
+
+/* Quote Styling */
+.quote {
+  font-family: 'Fira Code', monospace; /* Using Fira Code font */
+  font-size: 1.5rem;
+  color: #ddd;
+  font-style: italic;
+  margin: 30px 0; /* Add consistent space around the quote */
+  max-width: 800px;
+  padding-left: 20px;
+  border-left: 4px solid #fff; /* Adds a line to the left of the quote */
+  display: inline-block;
+}
+
+/* Button Styling */
+.styled-button {
+  font-family: 'Fira Code', monospace; /* Using Fira Code font */
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 15px 40px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 30px; /* Space above the button */
+}
+
+.styled-button:hover {
+  background-color: white;
+  color: #333;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+
+/* For large screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+  .typewriter-container h1 {
+    font-size: 4.5rem; /* Larger text for big screens */
+  }
+  .quote {
+    font-size: 1.6rem; /* Larger font size for the quote */
+  }
+  .styled-button {
+    font-size: 1.1rem;
+    padding: 18px 50px; /* More padding for larger screens */
+  }
+}
+
+/* For medium-large screens (1024px and above) */
+@media screen and (min-width: 1024px) {
+  .typewriter-container h1 {
+    font-size: 4rem; /* Large text for 1024px */
+  }
+  .quote {
+    font-size: 1.5rem; /* Slightly smaller font size for the quote */
+  }
+  .styled-button {
+    font-size: 1rem;
+    padding: 15px 40px;
+  }
+}
+
+/* For medium screens (768px and above) */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .typewriter-container h1 {
+    font-size: 3.5rem; /* Smaller font for mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Smaller subtitle for mobile */
+  }
+
+  p {
+    font-size: 1rem; /* Adjust text size */
+  }
+
+  .quote {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+    margin: 20px 0; /* Adjust space around the quote */
+  }
+
+  .styled-button {
+    padding: 12px 30px; /* Adjust button padding */
+  }
+}
+
+/* For smaller screens (425px and above) */
+@media screen and (max-width: 425px) {
+  .typewriter-container h1 {
+    font-size: 2rem; /* Smaller text for even smaller screens */
+    animation: none; /* Disable typewriter animation */
+    white-space: normal; /* Allow text to wrap */
+  }
+  .quote {
+    font-size: 1.1rem;
+    margin: 15px 0;
+  }
+  .styled-button {
+    padding: 12px 28px; /* Smaller button padding */
+    font-size: 0.95rem;
+  }
+}
+
+/* For even smaller screens (375px and above) */
+@media screen and (max-width: 375px) {
+  .typewriter-container h1 {
+    font-size: 1.5rem; /* Smaller text for very small screens */
+  }
+  .quote {
+    font-size: 1.1rem;
+    margin: 10px 0;
+  }
+  .styled-button {
+    padding: 10px 25px; /* Smaller button padding */
+    font-size: 0.9rem;
+  }
+}
+
+/* For the smallest screens (320px and above) */
+@media screen and (max-width: 320px) {
+  .typewriter-container h1 {
+    font-size: 1.1rem; /* Even smaller text for ultra-small screens */
+  }
+  .quote {
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  .styled-button {
+    padding: 10px 20px; /* Smaller button padding */
+    font-size: 0.85rem;
+  }
+}
