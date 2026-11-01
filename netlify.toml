@@ -1,0 +1,15 @@
+# Plain static site: no build step, publish the repository root.
+[build]
+  publish = "."
+  command = ""
+
+# Cache images and the favicon for a week; always re-check the page itself.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
